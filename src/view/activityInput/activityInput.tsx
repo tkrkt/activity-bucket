@@ -91,7 +91,7 @@ const FormContainer = styled.form`
   height: 100%;
 `;
 
-export class ActivityInput extends React.Component<{ context: AppContext }, { text: string }> {
+export class ActivityInput extends React.Component<{ context: AppContext }> {
   @bind
   onSubmit(event: React.FormEvent<any>) {
     event.preventDefault();

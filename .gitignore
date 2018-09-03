@@ -1,0 +1,4 @@
+.awcache
+*.log
+node_modules
+build

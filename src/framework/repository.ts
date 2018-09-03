@@ -8,7 +8,7 @@ export abstract class Repository<T extends Entity> {
 
   constructor(
     public entityClass: { new(...args: any[]): T },
-    private items: { [id: string]: T } = {}
+    protected items: { [id: string]: T } = {}
   ) {
     this.updated = false;
     this.needsRendering = false;
@@ -65,5 +65,5 @@ export abstract class Repository<T extends Entity> {
     return this.needsRendering;
   }
 
-  abstract async ready(): Promise<void>;
+  abstract async ready(): Promise<any>;
 }

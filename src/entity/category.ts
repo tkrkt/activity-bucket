@@ -15,6 +15,10 @@ export class Category implements CategoryProps, Entity {
   description: string;
   shorthand: string;
 
+  static fromJSON(json: any): Category {
+    return new Category(json);
+  }
+
   constructor(props: Partial<CategoryProps>) {
     if (props.id instanceof Identifier) {
       this.id = props.id;

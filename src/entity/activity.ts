@@ -19,6 +19,13 @@ export class Activity implements ActivityProps, Entity {
   date: string;
   time: string;
 
+  static fromJSON(json: any): Activity {
+    return new Activity({
+      ...json,
+      categoryId: new Identifier(Category, json.categoryId)
+    });
+  }
+
   constructor(props: Partial<ActivityProps> & { categoryId: Identifier<Category> }) {
     if (props.id instanceof Identifier) {
       this.id = props.id;

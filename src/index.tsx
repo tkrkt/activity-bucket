@@ -5,14 +5,12 @@ import { AppContext } from "./store/appContext";
 import { CategoryRepository } from "./repository/categoryRepository";
 import { ActivityRepository } from "./repository/activityRepository";
 import { initialState } from "./store/state";
-import { Category } from "./entity/category";
-import { Activity } from "./entity/activity";
 
 const container = document.getElementById("app");
 
 const context = new AppContext(render, {
-  category: new CategoryRepository(Category),
-  activity: new ActivityRepository(Activity)
+  category: new CategoryRepository(),
+  activity: new ActivityRepository()
 }, initialState);
 
 if (process.env.NODE_ENV !== "production") {

@@ -4,12 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@types/recompose": "^0.26.4",
     "decko": "^1.2.0",
     "localforage": "^1.7.2",
     "moment": "^2.22.2",
     "react": "^16.4.2",
     "react-calendar-heatmap": "^1.6.3",
     "react-dom": "^16.4.2",
+    "recompose": "^0.30.0",
     "styled-components": "^3.4.5",
     "uuid": "^3.3.2"
   },
